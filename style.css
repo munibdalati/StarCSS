@@ -1,0 +1,52 @@
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:hover {
+  animation: star 1s linear infinite;
+}
+
+@keyframes star {
+from{
+  opacity: 100%;
+}
+to{
+  opacity: 50%;
+}
+}
+
+.star {
+  position: relative;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid gold;
+  transform: rotate(35deg);
+}
+
+/* the vertical line */
+.star::before {
+  position: absolute;
+  content: "";
+  top: -45px;
+  left: -65px;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 80px solid gold;
+  transform: rotate(-35deg);
+}
+
+.star::after {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: -105px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid gold;
+  transform: rotate(-70deg);
+}
